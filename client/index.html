@@ -1,0 +1,53 @@
+<header>
+
+    <script src = "https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</header>
+
+<div id="div-login">
+    <h1>Submit name: </h1>
+    <input id="name-input" type="text">
+    <button onclick="login()">ENTER</button>
+    <div id = "login-message"></div>
+</div>
+
+
+
+
+<div id = "div-lobby" style="display:none">
+    <div id="div-chat">
+        <h2>Chat</h2>
+        <div id="chat"  style="width:500; height: 200; overflow-y: scroll;border: 1px solid black;margin:auto;"></div>
+        <form id="chat-form" style="width:500; height: 50; overflow-y:scroll;">
+            <input id="chat-input" style="width:480; height:50;"></input>
+        </form>
+    </div>
+    <h2>List of online players</h2>
+    <div id = "lobby-list"></div>
+
+    <button id = "start-game-button" onclick="startGame()">START ZI GAME</button>
+</div>
+
+
+<div id="div-canvas" style="display:none;">
+    <canvas id ="canvas"></canvas>
+</div>
+
+
+<script>
+    var socket = io();
+</script>
+<script type="text/javascript" src="./client/js/lobby.js"></script>
+<script type="text/javascript" src="./client/js/gameSockets.js"></script>
+<script type="text/javascript" src="./client/js/htmlFactory.js"></script>
+<script type="text/javascript" src="./client/js/canvas.js"></script>
+<script type="text/javascript" src="./client/js/Game.js"></script>
+<script type="text/javascript" src="./client/js/controls.js"></script>
+<script type="text/javascript" src="./client/js/Player.js"></script>
+<script type="text/javascript" src="./client/js/mouse.js"></script>
+<script type="text/javascript" src="./client/js/Bullet.js"></script>
+
